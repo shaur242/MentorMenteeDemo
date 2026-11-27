@@ -59,7 +59,7 @@ export default function SessionsPage() {
 
   const isMentor = currentRole === 'Mentor';
   const isMentee = currentRole === 'Mentee';
-  const isCoordOrHod = currentRole === 'Coordinator' || currentRole === 'HOD' || currentRole === 'Admin';
+  const isCoordOrHod = currentRole === 'Coordinator' || currentRole === 'HOD';
 
   const [activeTab, setActiveTab] = useState('all'); // 'all' | 'confirmed' | 'pending' | 'completed' | 'cancelled'
   const [searchQuery, setSearchQuery] = useState('');
@@ -161,7 +161,7 @@ export default function SessionsPage() {
       if (currentRole === 'Coordinator') {
         return s.mentor?.coordinatorId === currentUser.id || s.mentor?.coordinator === currentUser.id;
       }
-      // HOD or Admin
+      // HOD
       return true;
     });
   }, [hydratedSessions, isMentee, isMentor, currentRole, currentUser?.id]);

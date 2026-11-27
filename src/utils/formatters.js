@@ -23,8 +23,6 @@ export function getRoleBadgeColor(role) {
       return 'bg-emerald-100 text-emerald-800 border-emerald-200';
     case 'Mentee':
       return 'bg-amber-100 text-amber-800 border-amber-200';
-    case 'Admin':
-      return 'bg-slate-100 text-slate-800 border-slate-200';
     default:
       return 'bg-gray-100 text-gray-800 border-gray-200';
   }

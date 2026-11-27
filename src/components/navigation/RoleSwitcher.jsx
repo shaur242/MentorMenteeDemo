@@ -6,7 +6,7 @@ import { mockUsers } from '../../data/mockData';
 import Badge from '../common/Badge';
 import Avatar from '../common/Avatar';
 
-const ROLES = ['HOD', 'Coordinator', 'Mentor', 'Mentee', 'Admin'];
+const ROLES = ['HOD', 'Coordinator', 'Mentor', 'Mentee'];
 
 export default function RoleSwitcher() {
   const { currentRole, currentUser, switchDemoUser, coordinators, mentors, mentees, resetToInitialDemoData } = useApp();

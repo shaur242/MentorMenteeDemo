@@ -39,7 +39,7 @@ export default function ConnectionsPage() {
   // Tab State: Mentee defaults to 'active', Mentor defaults to 'incoming' if has pending requests
   const isMentor = currentRole === 'Mentor';
   const isMentee = currentRole === 'Mentee';
-  const isCoordOrHod = currentRole === 'Coordinator' || currentRole === 'HOD' || currentRole === 'Admin';
+  const isCoordOrHod = currentRole === 'Coordinator' || currentRole === 'HOD';
 
   const [activeTab, setActiveTab] = useState(() => (isMentor ? 'incoming' : 'active'));
   const [searchQuery, setSearchQuery] = useState('');
@@ -86,7 +86,7 @@ export default function ConnectionsPage() {
     .filter((c) => c.recipientId === currentUser?.id && c.status !== 'pending')
     .map((c) => ({ ...c, partner: getUserById(c.requesterId) }));
 
-  // ── Department / Scope (HOD / Coordinator / Admin) ────────────────────────
+  // ── Department / Scope (HOD / Coordinator) ────────────────────────
   const allScopedConnections = connections
     .map((c) => ({
       ...c,
@@ -539,7 +539,7 @@ export default function ConnectionsPage() {
         </div>
       )}
 
-      {/* ── HOD / COORDINATOR / ADMIN VIEW ──────────────────────────────── */}
+      {/* ── HOD / COORDINATOR VIEW ──────────────────────────────── */}
       {isCoordOrHod && (
         <div className="space-y-4">
           <div className="bg-white rounded-2xl border border-slate-200 p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">

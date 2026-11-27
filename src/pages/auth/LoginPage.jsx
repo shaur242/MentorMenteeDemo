@@ -40,7 +40,7 @@ export default function LoginPage() {
 
   // Demo selector tabs state
   const [activeDemoRole, setActiveDemoRole] = useState('Mentor');
-  const demoRoles = ['HOD', 'Coordinator', 'Mentor', 'Mentee', 'Admin'];
+  const demoRoles = ['HOD', 'Coordinator', 'Mentor', 'Mentee'];
 
   const getAccountsForRole = (role) => {
     if (role === 'Coordinator') return coordinators || [];

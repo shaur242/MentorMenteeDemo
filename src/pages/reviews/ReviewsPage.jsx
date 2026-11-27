@@ -458,7 +458,7 @@ export default function ReviewsPage() {
         </div>
       )}
 
-      {/* ── COORDINATOR / HOD / ADMIN VIEW ──────────────────────────────── */}
+      {/* ── COORDINATOR / HOD VIEW ──────────────────────────────── */}
       {!isMentor && !isMentee && (
         <Card title="All Platform Reviews" subtitle="Student ratings and written feedback across the department">
           <div className="space-y-4">

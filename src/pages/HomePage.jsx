@@ -30,7 +30,6 @@ export default function HomePage() {
     { name: 'Coordinator', desc: 'Mentor approvals, cohort tracking, and scheduling management', badge: 'navy' },
     { name: 'Mentor', desc: 'Profile details, availability, session requests, and ratings', badge: 'success' },
     { name: 'Mentee', desc: 'Mentor discovery, session booking, progress tracking', badge: 'warning' },
-    { name: 'Admin', desc: 'System configuration, role management, and audit logs', badge: 'default' },
   ];
 
   return (

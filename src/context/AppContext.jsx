@@ -317,7 +317,7 @@ export function AppProvider({ children }) {
     }
   }, [trimesterReviews]);
 
-  // Helper to look up any user (mentor, coordinator, mentee, HOD, admin)
+  // Helper to look up any user (mentor, coordinator, mentee, HOD)
   const getUserById = (userId) => {
     const mentor = mentors.find((m) => m.id === userId || m.mentorId === userId);
     if (mentor) return mentor;
@@ -756,8 +756,7 @@ export function AppProvider({ children }) {
         session.mentorId === cancellingUserId ||
         session.menteeId === cancellingUserId ||
         currentUser?.role === 'Coordinator' ||
-        currentUser?.role === 'HOD' ||
-        currentUser?.role === 'Admin';
+        currentUser?.role === 'HOD';
       if (!isParticipant) {
         return { success: false, error: 'Unauthorized: You cannot cancel or decline this session.' };
       }
@@ -1477,7 +1476,7 @@ export function AppProvider({ children }) {
     );
   };
 
-  /** Get department-wide reports (HOD / Admin) */
+  /** Get department-wide reports (HOD) */
   const getDepartmentReports = () => {
     return sessionReports;
   };
@@ -2205,7 +2204,7 @@ export function AppProvider({ children }) {
 
   /**
    * Get all goals across the entire department for HOD access.
-   * Access control verified against user role (HOD or Admin).
+   * Access control verified against user role (HOD).
    * Returns unified goal records spanning both Coordinator groups without duplicates.
    */
   const getDepartmentGoals = () => {

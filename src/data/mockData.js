@@ -1,5 +1,5 @@
 // Centralized Demo Accounts and Mentors Data for Mentor-Mentee Learning Platform
-// Total: 16 accounts (1 HOD, 2 Coordinators, 4 Mentors, 8 Mentees, 1 Admin)
+// Total: 15 accounts (1 HOD, 2 Coordinators, 4 Mentors, 8 Mentees)
 
 export const initialMentors = [
   {
@@ -396,23 +396,6 @@ export const mockUsers = [
 
   // ── 4. Mentees (8 Accounts) ─────────────────────────────────────────────
   ...initialMentees,
-
-  // ── 5. Admin (1 Account) ────────────────────────────────────────────────
-  {
-    id: 'user-admin-1',
-    name: 'System Admin',
-    role: 'Admin',
-    title: 'Platform Administrator',
-    department: 'Central IT Services',
-    company: 'University Computing Directorate',
-    email: 'admin@university.edu',
-    password: 'password123',
-    phone: '+91 98765 00099',
-    joinedYear: 2019,
-    initials: 'SA',
-    avatarColor: 'bg-slate-700',
-    bio: 'Manages institution directory synchronization, role allocations, system audits, and security policies.',
-  },
 ];
 
 // ── Initial Connections Dataset ───────────────────────────────────────────
@@ -1633,11 +1616,5 @@ export const mockStats = {
     { label: 'Upcoming Sessions', value: 2, change: 'Next: Wed 3 PM', trend: 'neutral' },
     { label: 'Completed Sessions', value: 7, change: '+2 this month', trend: 'up' },
     { label: 'Goals Achieved', value: '4 / 6', change: 'On track', trend: 'up' },
-  ],
-  Admin: [
-    { label: 'Total Accounts', value: 16, change: 'All 5 roles configured', trend: 'up' },
-    { label: 'Active Sessions', value: 16, change: 'Demo environment', trend: 'neutral' },
-    { label: 'System Health', value: '100%', change: 'All modules online', trend: 'up' },
-    { label: 'Security Audit', value: 'Passing', change: 'Role RBAC enforced', trend: 'up' },
   ],
 };

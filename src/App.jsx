@@ -57,12 +57,6 @@ import {
   MenteeGoalsPage,
 } from './pages/mentee/MenteePages';
 
-// Admin Pages
-import {
-  AdminUsersPage,
-  AdminAccountsPage,
-} from './pages/admin/AdminPages';
-
 /**
  * RootRoute component determines whether to send user to login or their role dashboard
  */
@@ -145,14 +139,6 @@ export default function App() {
                 <Route path="mentee/connections" element={<MenteeConnectionsPage />} />
                 <Route path="mentee/sessions" element={<MenteeSessionsPage />} />
                 <Route path="mentee/reviews" element={<MenteeReviewsPage />} />
-              </Route>
-
-              {/* ── 5. Admin Routes (Role: Admin) ─────────────────────── */}
-              <Route element={<ProtectedRoute allowedRoles={['Admin']} />}>
-                <Route path="admin/overview" element={<OverviewPage />} />
-                <Route path="admin/users" element={<AdminUsersPage />} />
-                <Route path="admin/mentors/:mentorId" element={<MentorDetailsPage />} />
-                <Route path="admin/accounts" element={<AdminAccountsPage />} />
               </Route>
 
             </Route>

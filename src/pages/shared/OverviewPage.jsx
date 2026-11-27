@@ -23,7 +23,7 @@ const recentActivity = [
   { id: 1, action: 'New connection request submitted', user: 'Alex Johnson', time: '5 min ago', type: 'request' },
   { id: 2, action: 'Session completed successfully', user: 'Dr. Emily Chen', time: '1 hr ago', type: 'session' },
   { id: 3, action: 'Monthly report generated', user: 'Prof. David Vance', time: '3 hr ago', type: 'report' },
-  { id: 4, action: 'New mentee allocated', user: 'System Admin', time: 'Yesterday', type: 'allocation' },
+  { id: 4, action: 'New mentee allocated', user: 'Dr. Sarah Jenkins', time: 'Yesterday', type: 'allocation' },
   { id: 5, action: 'Review submitted by mentee', user: 'Alex Johnson', time: 'Yesterday', type: 'review' },
 ];
 

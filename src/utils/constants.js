@@ -3,7 +3,6 @@ export const USER_ROLES = {
   COORDINATOR: 'Coordinator',
   MENTOR: 'Mentor',
   MENTEE: 'Mentee',
-  ADMIN: 'Admin',
 };
 
 export const REQUEST_STATUS = {
